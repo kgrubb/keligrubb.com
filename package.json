@@ -1,0 +1,45 @@
+{
+  "name": "keligrubb.com",
+  "version": "1.0.0",
+  "description": "personal website for Keli",
+  "author": "Keli Grubb",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "DEPLOY_ENV=GH_PAGES nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "lint-staged": {
+    "*.{js,vue}": "yarn lint",
+    "*.{css,vue}": "stylelint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@nuxtjs/axios": "^5.3.6",
+    "nuxt": "^2.0.0",
+    "nuxt-buefy": "^0.3.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^2.0.0",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/stylelint-module": "^3.1.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^4.0.0",
+    "lint-staged": "^10.0.0",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
+    "stylelint": "^13.3.1"
+  }
+}

@@ -78,35 +78,34 @@ export default {
     return {
       age: '',
       hobbies: [
-        'a software engineer',
-        'a developer',
+        'an os developer',
         'an ops nerd',
         'a pink starburst fanatic',
         'a tabletop adventurer',
+        'a husband',
+        'a shell wizard',
         'an ableton producer',
-        'a tabletop battlemaps artist',
         'a wildberry poptarts fan',
         'a Pokémon master',
         'a lego builder',
         'a father',
-        'a husband',
+        'a developer',
         'a jelly bean connoisseur',
-        'a shell wizard',
         'a javascript developer',
         'a fan of golang',
         'an open source advocate',
-        'an os developer',
         'a proponent of strong ci/cd practice',
         'an automator',
         'definitely not a robot',
         'an AOSP tinkerer',
-        'a computer gamer',
         'a linux gamer',
         'a maintainer of various open source docker images',
+        'a tabletop battlemaps artist',
         'a kubernetes engineer',
         'an app developer',
         'a Humans vs Zombies Moderator',
       ],
+      hobbyIndex: 0,
       hobby: 'a software engineer',
     };
   },
@@ -122,7 +121,11 @@ export default {
   methods: {
     cycleHobbies() {
       return setInterval(() => {
-        this.hobby = this.hobbies[Math.floor(Math.random() * Math.floor(this.hobbies.length))];
+        if (this.hobbyIndex === this.hobbies.length) {
+          this.hobbyIndex = 0;
+        }
+        this.hobby = this.hobbies[this.hobbyIndex];
+        this.hobbyIndex += 1;
         return this.hobby;
       }, 2000);
     },

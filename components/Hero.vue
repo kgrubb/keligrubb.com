@@ -31,6 +31,16 @@
           <a
             target="_blank"
             rel="noopener noreferrer"
+            href="https://twitch.tv/socialsyndrome"
+            class="has-text-light"
+          >
+            <span class="icon is-large">
+              <i class="fab fa-lg fa-twitch" />
+            </span>
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
             href="https://github.com/kgrubb"
             class="has-text-light"
           >
@@ -132,18 +142,3 @@ export default {
   },
 };
 </script>
-<style>
-.NuxtLogo {
-  animation: 1s appear;
-  margin: auto;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-</style>

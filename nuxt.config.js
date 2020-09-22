@@ -1,9 +1,5 @@
-
 export default {
-  mode: 'universal',
-  /*
-  ** Headers of the page
-  */
+  // Headers of the page
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -15,32 +11,22 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ],
   },
-  /*
-  ** Customize the progress-bar color
-  */
+  // Customize the progress-bar color
   loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
+  // Global CSS
   css: [
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
+  // Plugins to load before mounting the App
   plugins: [
   ],
-  /*
-  ** Nuxt.js dev-modules
-  */
+  // Nuxt.js dev-modules
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
   ],
-  /*
-  ** Nuxt.js modules
-  */
+  // Nuxt.js modules
   modules: [
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy',
@@ -53,13 +39,9 @@ export default {
   */
   axios: {
   },
-  /*
-  ** Build configuration
-  */
+  // Build configuration
   build: {
-    /*
-    ** You can extend webpack config here
-    */
+    // You can extend webpack config here
     // eslint-disable-next-line no-unused-vars
     extend(config, ctx) {
     },

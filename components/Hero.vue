@@ -121,8 +121,10 @@ export default {
   },
   computed: {
     calculateAge() {
-      const age = new Date().getFullYear() - new Date('03/24/1993').getFullYear();
-      return age;
+      const birthday = new Date('03/24/1993');
+      const ageDifMs = Date.now() - birthday.getTime();
+      const ageDate = new Date(ageDifMs);
+      return Math.abs(ageDate.getUTCFullYear() - 1970);
     },
   },
   mounted() {

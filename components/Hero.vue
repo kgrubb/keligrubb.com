@@ -121,7 +121,7 @@ export default {
   },
   computed: {
     calculateAge() {
-      const birthday = new Date('11/14/1994');
+      const birthday = new Date('03/24/1993');
       const ageDifMs = Date.now() - birthday.getTime();
       const ageDate = new Date(ageDifMs);
       return Math.abs(ageDate.getUTCFullYear() - 1970);

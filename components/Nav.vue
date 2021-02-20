@@ -25,12 +25,12 @@
       >
         Projects
       </b-navbar-item>
-      <!-- <b-navbar-item
-        href="#resume"
+      <b-navbar-item
+        href="/minecraft"
         class="has-text-light"
       >
-        Resume
-      </b-navbar-item> -->
+        Minecraft
+      </b-navbar-item>
     </template>
   </b-navbar>
 </template>

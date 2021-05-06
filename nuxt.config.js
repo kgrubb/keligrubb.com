@@ -45,5 +45,8 @@ export default {
     // eslint-disable-next-line no-unused-vars
     extend(config, ctx) {
     },
+    babel: {
+      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
+    },
   },
 };

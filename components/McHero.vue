@@ -13,7 +13,7 @@
           inverted
           outlined
           tag="a"
-          href="https://github.com/kgrubb/keligrubb.com/releases/download/thecycle-1.0.5/thecycle.keligrubb.com.zip"
+          href="https://github.com/kgrubb/keligrubb.com/releases/download/thecycle-1.0.6/thecycle.keligrubb.com.zip"
           target="_blank"
         >
           Download Modpack

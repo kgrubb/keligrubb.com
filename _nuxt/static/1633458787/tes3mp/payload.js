@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tes3mp", {data:[{}],fetch:{},mutations:void 0});

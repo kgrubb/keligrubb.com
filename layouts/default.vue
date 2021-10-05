@@ -67,7 +67,11 @@ $link-focus-border: $primary;
 @import "~buefy/src/scss/buefy";
 @import "@fortawesome/fontawesome-free/css/all.css";
 html {
-  scroll-behavior:smooth
+  scroll-behavior: smooth;
+  /*FireFox*/
+  scrollbar-width: none;
+  /*IE10+*/
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 body{
   padding-top: 0px!important;

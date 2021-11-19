@@ -8,16 +8,13 @@
         <h1 class="title is-3 has-text-weight-light has-text-centered">
           Download my modpack & follow its instructions to get started!
         </h1>
-        <b-button
-          type="is-primary"
-          inverted
-          outlined
-          tag="a"
+        <a
+          class="button is-primary is-inverted is-outlined"
           href="https://github.com/kgrubb/forge/releases/download/thecycle-1.0.9/thecycle.keligrubb.com.zip"
           target="_blank"
         >
           Download Modpack
-        </b-button>
+        </a>
       </div>
     </div>
   </section>

@@ -1,38 +1,37 @@
 <template>
-  <b-navbar
-    :fixed-top="true"
-    class="is-transparent"
-    :mobile-burger="false"
+  <nav
+    class="navbar is-fixed-top is-transparent"
   >
-    <template slot="brand">
-      <b-navbar-item
-        tag="router-link"
-        :to="{ path: '/' }"
+    <div class="navbar-brand">
+      <NuxtLink
+        class="navbar-item"
+        to="/"
       >
         <figure class="image is-24x24">
           <img
             class="is-rounded"
+            alt="profile"
             src="../assets/profile.png"
           >
         </figure>
         <span class="is-bumped has-text-light">Home</span>
-      </b-navbar-item>
-    </template>
-    <template slot="start">
-      <b-navbar-item
+      </NuxtLink>
+    </div>
+    <div class="navbar-start">
+      <a
         href="#projects"
-        class="has-text-light"
+        class="navbar-item has-text-light"
       >
         Projects
-      </b-navbar-item>
-      <b-navbar-item
-        href="/minecraft"
-        class="has-text-light"
+      </a>
+      <NuxtLink
+        to="/minecraft"
+        class="navbar-item has-text-light"
       >
         Minecraft
-      </b-navbar-item>
-    </template>
-  </b-navbar>
+      </NuxtLink>
+    </div>
+  </nav>
 </template>
 <style lang="scss" scoped>
 

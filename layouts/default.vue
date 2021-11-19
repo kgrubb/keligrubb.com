@@ -3,7 +3,7 @@
 </template>
 <style lang="scss">
 // Import Bulma's core
-@import "~bulma/sass/utilities/_all";
+@import "bulma/sass/utilities/_all";
 
 // Set your colors
 $primary: #424874;
@@ -63,8 +63,7 @@ $link-invert: $primary-invert;
 $link-focus-border: $primary;
 
 // Import Bulma and Buefy styles
-@import "~bulma";
-@import "~buefy/src/scss/buefy";
+@import "bulma/bulma.sass";
 @import "@fortawesome/fontawesome-free/css/all.css";
 html {
   scroll-behavior: smooth;

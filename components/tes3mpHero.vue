@@ -26,16 +26,13 @@
           </span>
         </h1>
 
-        <b-button
-          type="is-primary"
-          inverted
-          outlined
-          tag="a"
+        <a
+          class="button is-primary is-inverted is-outlined"
           href="https://drive.google.com/u/0/uc?export=download&confirm=H0rv&id=1ftgA9DBSXjaxk_SoGzMoS414oNS4qI1l"
           target="_blank"
         >
           Download TES3MP
-        </b-button>
+        </a>
       </div>
     </div>
   </section>

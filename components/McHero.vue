@@ -10,7 +10,7 @@
         </h1>
         <a
           class="button is-primary is-inverted is-outlined"
-          href="https://github.com/kgrubb/forge/releases/download/thecycle-1.0.9/thecycle.keligrubb.com.zip"
+          href="https://github.com/kgrubb/forge/releases/download/thecycle-2.0.0/thecycle.keligrubb.com.zip"
           target="_blank"
         >
           Download Modpack

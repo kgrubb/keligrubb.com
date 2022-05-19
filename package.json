@@ -32,6 +32,6 @@
     "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
     "sass": "^1.51.0",
-    "sass-loader": "10"
+    "sass-loader": "13"
   }
 }

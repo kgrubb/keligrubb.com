@@ -12,7 +12,7 @@
         </h1>
         <a
           class="button is-primary is-inverted is-outlined"
-          :href="getLatestRelease"
+          :href="latestRelease"
           target="_blank"
         >Download Modpack</a>
       </div>
@@ -21,12 +21,24 @@
 </template>
 <script>
 export default {
-  computed: {
-    getLatestRelease() {
-      const xmlHttp = new XMLHttpRequest();
-      xmlHttp.open('GET', 'https://api.github.com/repos/kgrubb/forge/releases/latest', false);
-      xmlHttp.send(null);
-      return JSON.parse(xmlHttp.responseText).assets[0].browser_download_url;
+  data() {
+    return {
+      latestRelease: '',
+    };
+  },
+  mounted() {
+    this.getLatestRelease();
+  },
+  methods: {
+    async getLatestRelease() {
+      const res = await fetch('https://api.github.com/repos/kgrubb/forge/releases/latest');
+      if (res.ok) {
+        const data = await res.json();
+        this.latestRelease = data.assets[0].browser_download_url;
+        return data.assets[0].browser_download_url;
+      }
+      this.latestRelease = 'https://github.com/kgrubb/forge/releases';
+      return 'https://github.com/kgrubb/forge/releases';
     },
   },
 };

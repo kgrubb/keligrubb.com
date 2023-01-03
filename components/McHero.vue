@@ -34,7 +34,7 @@ export default {
       const res = await fetch('https://api.github.com/repos/kgrubb/forge/releases/latest');
       if (res.ok) {
         const data = await res.json();
-        this.latestRelease = data.assets[0].browser_download_url;
+        this.latestRelease = data.assets[1].browser_download_url;
         return data.assets[0].browser_download_url;
       }
       this.latestRelease = 'https://github.com/kgrubb/forge/releases';

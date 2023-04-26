@@ -18,12 +18,12 @@
       </NuxtLink>
     </div>
     <div class="navbar-start">
-      <a
-        href="/#projects"
+      <NuxtLink
+        to="/#projects"
         class="navbar-item has-text-light"
       >
         Projects
-      </a>
+      </NuxtLink>
       <NuxtLink
         to="/minecraft"
         class="navbar-item has-text-light"

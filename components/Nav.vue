@@ -19,7 +19,7 @@
     </div>
     <div class="navbar-start">
       <a
-        href="#projects"
+        href="/#projects"
         class="navbar-item has-text-light"
       >
         Projects

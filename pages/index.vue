@@ -3,7 +3,6 @@
     <Nav />
     <Hero />
     <Projects id="projects" />
-    <!-- <Resume id="resume" /> -->
   </section>
 </template>
 
@@ -11,7 +10,6 @@
 import Nav from '../components/Nav.vue';
 import Hero from '../components/Hero.vue';
 import Projects from '../components/Projects.vue';
-// import Resume from '../components/Resume.vue';
 
 export default {
   name: 'HomePage',
@@ -20,7 +18,6 @@ export default {
     Nav,
     Hero,
     Projects,
-    // Resume,
   },
 };
 </script>

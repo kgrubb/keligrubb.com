@@ -1,5 +1,6 @@
 <template>
-  <Nuxt />
+  <!-- eslint-disable-next-line vue/no-multiple-template-root -->
+  <slot />
 </template>
 <style lang="scss">
 // Import Bulma's core
@@ -15,46 +16,26 @@ $control-border-width: 0.125em;
 
 // Setup $colors to use as bulma classes (e.g. 'is-light-blue')
 $colors: (
-  "white": (
-    $white,
-    $black
-  ),
-  "black": (
-    $black,
-    $white
-  ),
-  "light": (
-    $light,
-    $light-invert
-  ),
-  "dark": (
-    $dark,
-    $dark-invert
-  ),
-  "darkish": (
-    $darkish,
-    $darkish-invert
-  ),
-  "primary": (
-    $primary,
-    $primary-invert
-  ),
-  "info": (
-    $info,
-    $info-invert
-  ),
-  "success": (
-    $success,
-    $success-invert
-  ),
-  "warning": (
-    $warning,
-    $warning-invert
-  ),
-  "danger": (
-    $danger,
-    $danger-invert
-  ),
+  "white": ($white,
+    $black ),
+  "black": ($black,
+    $white ),
+  "light": ($light,
+    $light-invert ),
+  "dark": ($dark,
+    $dark-invert ),
+  "darkish": ($darkish,
+    $darkish-invert ),
+  "primary": ($primary,
+    $primary-invert ),
+  "info": ($info,
+    $info-invert ),
+  "success": ($success,
+    $success-invert ),
+  "warning": ($warning,
+    $warning-invert ),
+  "danger": ($danger,
+    $danger-invert ),
 );
 
 // Links
@@ -62,19 +43,19 @@ $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
 
-// Import Bulma and Buefy styles
+// Import Bulma styles
 @import "bulma/bulma.sass";
-@import "@fortawesome/fontawesome-free/css/all.css";
+
 html {
   scroll-behavior: smooth;
   /*FireFox*/
   scrollbar-width: none;
-  /*IE10+*/
-  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
-body{
-  padding-top: 0px!important;
+
+body {
+  padding-top: 0px !important;
 }
+
 .navbar {
   &.is-transparent {
     background-color: transparent;

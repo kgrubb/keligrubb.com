@@ -18,63 +18,39 @@
         </h1>
         <br>
         <div class="has-text-centered">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://twitter.com/itsmekeli"
-            class="has-text-light"
-          >
+          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/itsmekeli" class="has-text-light">
             <span class="icon is-large">
-              <i class="fab fa-lg fa-twitter" />
+              <font-awesome-icon icon="fa-brands fa-twitter" class="fa-xl" />
             </span>
           </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://twitch.tv/socialsyndrome"
-            class="has-text-light"
-          >
+          <a target="_blank" rel="noopener noreferrer" href="https://mastodon.online/@itsmekeli" class="has-text-light">
             <span class="icon is-large">
-              <i class="fab fa-lg fa-twitch" />
+              <font-awesome-icon icon="fa-brands fa-mastodon" class="fa-xl" />
             </span>
           </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/kgrubb"
-            class="has-text-light"
-          >
+          <a target="_blank" rel="noopener noreferrer" href="https://twitch.tv/socialsyndrome" class="has-text-light">
             <span class="icon is-large">
-              <i class="fab fa-lg fa-github" />
+              <font-awesome-icon icon="fa-brands fa-twitch" class="fa-xl" />
             </span>
           </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://gitlab.com/madison.grubb"
-            class="has-text-light"
-          >
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/kgrubb" class="has-text-light">
             <span class="icon is-large">
-              <i class="fab fa-lg fa-gitlab" />
-            </span>
-          </a><a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/madisongrubb"
-            class="has-text-light"
-          >
-            <span class="icon is-large">
-              <i class="fab fa-lg fa-linkedin" />
+              <font-awesome-icon icon="fa-brands fa-github" class="fa-xl" />
             </span>
           </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://soundcloud.com/atlasfuture"
-            class="has-text-light"
-          >
+          <a target="_blank" rel="noopener noreferrer" href="https://gitlab.com/madison.grubb" class="has-text-light">
             <span class="icon is-large">
-              <i class="fab fa-lg fa-soundcloud" />
+              <font-awesome-icon icon="fa-brands fa-gitlab" class="fa-xl" />
+            </span>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/madisongrubb" class="has-text-light">
+            <span class="icon is-large">
+              <font-awesome-icon icon="fa-brands fa-linkedin" class="fa-xl" />
+            </span>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/atlasfuture" class="has-text-light">
+            <span class="icon is-large">
+              <font-awesome-icon icon="fa-brands fa-soundcloud" class="fa-xl" />
             </span>
           </a>
         </div>
@@ -114,6 +90,7 @@ export default {
         'a kubernetes engineer',
         'an app developer',
         'a Humans vs Zombies Moderator',
+        'a nerf blaster modifier',
       ],
       hobbyIndex: 0,
       hobby: 'a software engineer',

@@ -30,6 +30,9 @@
       >
         Minecraft
       </NuxtLink>
+      <NuxtLink to="/knave" class="navbar-item has-text-light">
+        Knave
+      </NuxtLink>
     </div>
   </nav>
 </template>

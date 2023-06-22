@@ -14,11 +14,14 @@
         <p>HitPoints: {{ HitPoints }}</p>
         <button
           class="button is-primary is-inverted is-outlined"
-          @click="genCharacter()">Create Characte
-        r</button>
+          @click="genCharacter()">Reroll Character
+        </button>
+        <br>
+        <br>
         <br>
         <br>
         <p> {{ randomWeapon }} </p>
+        <br>
         <button
           class="button is-primary is-inverted is-outlined"
           @click="genRandomWeapon()">Generate Weapon
@@ -134,7 +137,7 @@ export default {
           'Wispy',
         ],
       },
-      description: '',
+      Description: '',
       firstName: [
         'Adelaide',
         'Adrian',

@@ -30,6 +30,6 @@
     "eslint-plugin-vue": "^9.16.1",
     "husky": "^8.0.2",
     "lint-staged": "^13.2.3",
-    "sass": "^1.64.2"
+    "sass": "^1.65.1"
   }
 }

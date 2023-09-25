@@ -1,20 +1,20 @@
 <template>
   <section>
     <Nav />
-    <Knave />
+    <KnaveWeapongen />
   </section>
 </template>
 
 <script>
 import Nav from '../components/Nav.vue';
-import Knave from '../components/Knave.vue';
+import KnaveWeapongen from '../components/KnaveWeapongen.vue';
 
 export default {
-  name: 'Knave',
+  name: 'Knave Chargen',
 
   components: {
     Nav,
-    Knave,
+    KnaveWeapongen,
   },
 };
 </script>

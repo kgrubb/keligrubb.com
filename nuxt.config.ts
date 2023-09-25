@@ -11,7 +11,7 @@ export default defineNuxtConfig({
       },
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: process.env.npm_package_description || 'nuxt-powered static site' },
+        { hid: 'description', name: 'description', content: 'Personal website for Keli' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

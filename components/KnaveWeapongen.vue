@@ -53,8 +53,21 @@ export default {
           "Captain's": '+1 Charisma',
           "Coward's": '-1 Charisma',
           Flayed: '+1 Strength, -1 Dexterity',
+          Precise: '+1 Dexterity, -1 Strength',
+          Giant: '+1 Strength, -1 Intelligence',
+          Enlightening: '+1 Intelligence, -1 Strength',
+          "Barbarian's": '+1 Strength, -1 Charisma',
+          Performant: '+1 Charisma, -1 Strength',
+          "Wizard's": '+1 Wisdom, -1 Strength',
+          Oxen: '+1 Strength, -1 Wisdom',
+          Brilliant: '+1 Charisma, -1 Dexterity',
+          Bashful: '+1 Dexterity, -1 Charisma',
+          Transcendent: '+1 Wisdom, -1 Charisma',
+          Glowing: '+1 Intelligence, -1 Dexterity',
           Deadly: '+1 Damage on hit',
           Honed: '+2 Damage on hit',
+          Sturdy: '+1 to AC',
+          Frail: '-1 to AC',
           Crystalline: '+3 Damage on hit, doubled quality decay',
           Cheap: 'worth half-price',
           Used: 'worth half-price',
@@ -81,7 +94,7 @@ export default {
           Crossbow: 'd8 dmg, 3 slots, 2 hands, 3 quality',
         },
         suffixes: {
-          'of the Flames': 'critical hits engulf the target in flames',
+          'of Incineration': 'critical hits engulf the target in flames',
           'of the Vulture': 'regain 1 hit point per successful hit',
           'of the Shepherd': 'double-damage to wild animals',
           'of Darkness': 'blinds the target for 1 turn on hit',
@@ -91,6 +104,14 @@ export default {
           "of the Glacier's Heart": 'critical hits freeze the target solid',
           'of the Executioner': 'if your first hit kills the target, you may attack another adjacent target',
           'of the Storm': 'critical hits electrocute the target',
+          'of the Ages': 'critical hits restore 1 quality to the weapon',
+          'of the Wraith': 'prevents the target from healing for 1 turn on a successful hit',
+          'of Pestilence': 'poisons the target on a successful hit',
+          'of Greed': 'gold found on slain foes is doubled',
+          'of the Serpent': 'any water that touches this weapon slowly absorbs into the weapon indefinitely',
+          'of the Magi': 'while holding this weapon, you can understand all spoken languages, but cannot speak them',
+          'of the Undying': 'living flesh that you touch with this weapon cannot decompose or become corrupted',
+          'of Splendor': "this weapon glows with bright light up to a 15' radius",
         },
       },
       randomWeaponName: '',
@@ -130,3 +151,10 @@ export default {
   },
 };
 </script>
+<style scoped>
+.has-bg-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .9)),
+    url("../assets/knave.jpg");
+  background-size: cover;
+}
+</style>

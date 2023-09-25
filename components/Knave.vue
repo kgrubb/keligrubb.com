@@ -33,3 +33,10 @@
     </div>
   </section>
 </template>
+<style scoped>
+.has-bg-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .9)),
+    url("../assets/knave.jpg");
+  background-size: cover;
+}
+</style>

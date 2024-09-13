@@ -28,7 +28,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-vue": "^9.28.0",
-    "husky": "^9.1.5",
+    "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "sass": "^1.78.0"
   }

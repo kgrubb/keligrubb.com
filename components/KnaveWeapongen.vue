@@ -9,7 +9,7 @@
           <img alt="designed for knave" width="256" src="../assets/designed_for_knave.png">
         </div>
         <div class="block">
-          <button class="button is-primary is-inverted is-outlined" @click="genRandomWeapon()">
+          <button class="button is-white is-outlined" @click="genRandomWeapon()">
             Reroll Weapon
           </button>
         </div>

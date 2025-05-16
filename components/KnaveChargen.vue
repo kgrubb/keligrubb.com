@@ -9,7 +9,7 @@
           <img alt="designed for knave" width="256" src="../assets/designed_for_knave.png">
         </div>
         <div class="block">
-          <button class="button is-primary is-inverted is-outlined" @click="genCharacter()">
+          <button class="button is-white is-outlined" @click="genCharacter()">
             Reroll Character
           </button>
         </div>
@@ -22,7 +22,7 @@
               <p><strong>HitPoints:</strong> {{ HitPoints }}/{{ HitPoints }}</p>
             </div>
             <div class="level-item">
-              <p><strong>Armor Class:</strong> 11</p>
+              <p><strong>Armor Class:</strong> {{ ArmorClass }}</p>
             </div>
           </div>
           <div class="container is-max-desktop">
@@ -31,6 +31,13 @@
                 <div>
                   <h3 class="title is-4">You are {{ Name }}</h3>
                   <p>{{ Description }}</p>
+                </div>
+                <br>
+                <div>
+                   <h3 class="title is-4">Starting Gear</h3>
+                    <ul>
+                      <li v-for="(item, index) in StartingGear" :key="index">{{ item }}</li>
+                    </ul>
                 </div>
               </div>
               <div class="column">
@@ -75,9 +82,8 @@ export default {
       Wisdom: '',
       Charisma: '',
       HitPoints: '',
-      StartingGear: {
-
-      },
+      ArmorClass: 11,
+      StartingGear: [],
       character: '',
       characterTraits: {
         physique: [
@@ -123,41 +129,62 @@ export default {
           'Square',
           'Wide',
           'Wolfish',
+          'Lean',
+          'Gaunt',
+          'Full',
+          'Joyful',
+          'Stern',
+          'Somber',
+          'Serene',
+          'Serious',
+          'Strong',
+          'Young',
+          'Noble',
         ],
         skin: [
           'Battle Scarred',
-          'Birthmark',
+          'Birthmarked',
           'Burn Scarred',
           'Dark',
-          'Makeup',
+          'Well Maintained',
           'Oily',
           'Pale',
           'Perfect',
           'Pierced',
           'Pockmarked',
-          'Reeking',
+          'Wrinkled',
           'Tattooed',
           'Rosy',
           'Rough',
-          'Sallow',
+          'Soft',
+          'Unhealthy',
           'Sunburned',
           'Tanned',
           'War Painted',
           'Weathered',
-          'Whip Scarred',
+          'Scarred',
+          'Smooth',
+          'Freckled',
+          'Patchy',
+          'Glowing',
+          'Ashen',
+          'Earthy',
+          'Youthful',
+          'Clear',
+          'Calloused',
+          'Dull',
         ],
         hair: [
-          'Bald',
+          'No',
           'Braided',
           'Bristly',
           'Cropped',
           'Curly',
           'Disheveled',
-          'Dreadlocks',
+          'Dreadlocked',
           'Filthy',
           'Frizzy',
           'Greased',
-          'Limp',
           'Long',
           'Luxurious',
           'Mohawk',
@@ -167,14 +194,34 @@ export default {
           'Topknot',
           'Wavy',
           'Wispy',
+          'Jet-black',
+          'Golden',
+          'Thick',
+          'Auburn',
+          'Black',
+          'Short',
+          'Brown',
+          'Blonde',
+          'Silvered',
+          'Flowing',
+          'Glossy',
+          'Fiery',
+          'Windswept',
+          'Spiky',
+          'Shaggy',
+          'Rusty',
+          'Red',
+          'White',
         ],
       },
       Description: '',
       firstName: [
         'Adelaide',
         'Adrian',
+        'Aisha',
         'Alexandra',
         'Alma',
+        'Amara',
         'Anders',
         'Angar',
         'Asa',
@@ -205,6 +252,7 @@ export default {
         'Davina',
         'Deimos',
         'Destrian',
+        'Diego',
         'Dudley',
         'Elisabeth',
         'Ellis',
@@ -224,7 +272,12 @@ export default {
         'Hannibal',
         'Hikari',
         'Ian',
+        'Ibrahim',
+        'Icarus',
+        'Idris',
+        'Imani',
         'Indra',
+        'Isaac',
         'Jasmine',
         'Jasper',
         'Jiles',
@@ -233,18 +286,31 @@ export default {
         'Joshua',
         'Jules',
         'Kayne',
+        'Khalid',
+        'Koda',
+        'Kwame',
+        'Lance',
+        'Liam',
+        'Lincoln',
+        'Lionel',
+        'Lily',
+        'Lina',
+        'Linda',
         'Lilian',
         'Lilith',
         'Lucian',
         'Luther',
         'Leopold',
+        'Malik',
         'Marcelin',
+        'Mateo',
         'Matthew',
         'Merrick',
         'Michael',
         'Mila',
         'Moe',
         'Mortimer',
+        'Nia',
         'Nigel',
         'Ogden',
         'Oliver',
@@ -264,6 +330,7 @@ export default {
         'Reinhold',
         'Riley',
         'River',
+        'Rohan',
         'Rowan',
         'Ruin',
         'Silas',
@@ -274,6 +341,7 @@ export default {
         'Sumesh',
         'Summer',
         'Sybil',
+        'Tala',
         'Taylor',
         'Tenpiece',
         'Tulip',
@@ -288,31 +356,41 @@ export default {
       ],
       lastName: [
         'Angler',
+        'Ashworth',
         'Autumnloft',
         'Bain',
+        'Baptiste',
         'Barrow',
         'Belvedere',
         'Beechwood',
         'Bithesea',
         'Blackwater',
+        'Bracken',
         'Broadbent',
         'Calaver',
         'Carter',
         'Carvolo',
         'Crestwood',
         'Culpepper',
+        'Dawnsinger',
+        'Diallo',
         'Dresden',
         'Droll',
         'Dunlow',
         'Duval',
         'Erelong',
         'Evenwind',
+        'Fairweather',
+        'Fenwick',
         'Fernsby',
         'Fisk',
         'Fitzgerald',
+        'Fletcher',
         'Frost',
         'Galewind',
+        'Greycastle',
         'Grimeson',
+        'Grimshaw',
         'Gruger',
         'Halcyon',
         'Hanks',
@@ -320,13 +398,19 @@ export default {
         'Hawker',
         'Hemlock',
         'Ironstone',
+        'Jackery',
         'Kreel',
         'Malmora',
         'Maul',
         'Moonridge',
+        'Mossbrook',
         'Norman',
+        'Oldham',
+        'Oakhart',
+        'Palmwood',
         'Patel',
         'Portendorfer',
+        'Redsky',
         'Revayne',
         'Rook',
         'Roxley',
@@ -338,7 +422,11 @@ export default {
         'Skorbeck',
         'Snaketail',
         'Southwark',
+        'Stonehand',
+        'Stormcaller',
+        'Sunstone',
         'Swiftwing',
+        'Tanaka',
         'Taylor',
         'Teagrass',
         'Treespeaker',
@@ -349,8 +437,208 @@ export default {
         'Westergreen',
         'Weston',
         'Wexley',
+        'Whisperwind',
         'Winterheart',
         'Wrynn',
+      ],
+      armorTable: [
+        {
+          range: [1, 3], name: 'No armor', slots: 0, quality: 0, acSet: 11,
+        },
+        {
+          range: [4, 14], name: 'Padded Armor', slots: 1, quality: 1, acSet: 12,
+        },
+        {
+          range: [15, 19], name: 'Brigandine', slots: 2, quality: 2, acSet: 13,
+        },
+        {
+          range: [20, 20], name: 'Chainmail', slots: 3, quality: 3, acSet: 14,
+        },
+      ],
+      helmetShieldTable: [
+        { range: [1, 13], name: 'None', items: [] },
+        {
+          range: [14, 16],
+          name: 'Helmet',
+          items: [{
+            name: 'Helmet', details: 'Defense +1', slots: 1, quality: 1, acBonus: 1,
+          }],
+        },
+        {
+          range: [17, 19],
+          name: 'Shield',
+          items: [{
+            name: 'Shield', details: 'Defense +1', slots: 1, quality: 1, acBonus: 1,
+          }],
+        },
+        {
+          range: [20, 20],
+          name: 'Helmet and Shield',
+          items: [
+            {
+              name: 'Helmet', details: 'Defense +1', slots: 1, quality: 1, acBonus: 1,
+            },
+            {
+              name: 'Shield', details: 'Defense +1', slots: 1, quality: 1, acBonus: 1,
+            },
+          ],
+        },
+      ],
+      dungeoneeringGear: [
+        {
+          name: 'Rope, 50ft', slots: 1,
+        }, {
+          name: 'Pulleys', slots: 1,
+        },
+        {
+          name: 'Candles, 5', slots: 1,
+        }, {
+          name: 'Chain, 10ft', slots: 1,
+        },
+        {
+          name: 'Chalk, 10', slots: 1,
+        }, {
+          name: 'Crowbar', slots: 1,
+        },
+        {
+          name: 'Tinderbox', slots: 1,
+        }, {
+          name: 'Grappling hook', slots: 1,
+        },
+        {
+          name: 'Hammer', slots: 1,
+        }, {
+          name: 'Waterskin', slots: 1,
+        },
+        {
+          name: 'Lantern', slots: 1,
+        }, {
+          name: 'Lamp oil', slots: 1,
+        },
+        {
+          name: 'Padlock', slots: 1,
+        }, {
+          name: 'Manacles', slots: 1,
+        },
+        {
+          name: 'Mirror', slots: 1,
+        }, {
+          name: 'Pole, 10ft', slots: 1,
+        },
+        {
+          name: 'Sack', slots: 1,
+        }, {
+          name: 'Tent', slots: 2,
+        },
+        {
+          name: 'Spikes, 5', slots: 1,
+        }, {
+          name: 'Torches, 5', slots: 1,
+        },
+      ],
+      generalGear1: [
+        {
+          name: 'Air bladder', slots: 1,
+        }, {
+          name: 'Bear trap', slots: 1,
+        },
+        {
+          name: 'Shovel', slots: 1,
+        }, {
+          name: 'Bellows', slots: 1,
+        },
+        {
+          name: 'Grease', slots: 1,
+        }, {
+          name: 'Saw', slots: 1,
+        },
+        {
+          name: 'Bucket', slots: 1,
+        }, {
+          name: 'Caltrops', slots: 1,
+        },
+        {
+          name: 'Chisel', slots: 1,
+        }, {
+          name: 'Drill', slots: 1,
+        },
+        {
+          name: 'Fish. rod', slots: 1,
+        }, {
+          name: 'Marbles', slots: 1,
+        },
+        {
+          name: 'Glue', slots: 1,
+        }, {
+          name: 'Pick', slots: 1,
+        },
+        {
+          name: 'Hourglass', slots: 1,
+        }, {
+          name: 'Net', slots: 1,
+        },
+        {
+          name: 'Tongs', slots: 1,
+        }, {
+          name: 'Lockpicks', slots: 1,
+        },
+        {
+          name: 'Metal file', slots: 1,
+        }, {
+          name: 'Nails', slots: 1,
+        },
+      ],
+      generalGear2: [
+        {
+          name: 'Incense', slots: 1,
+        }, {
+          name: 'Sponge', slots: 1,
+        },
+        {
+          name: 'Lens', slots: 1,
+        }, {
+          name: 'Perfume', slots: 1,
+        },
+        {
+          name: 'Horn', slots: 1,
+        }, {
+          name: 'Bottle', slots: 1,
+        },
+        {
+          name: 'Soap', slots: 1,
+        }, {
+          name: 'Spyglass', slots: 1,
+        },
+        {
+          name: 'Tar pot', slots: 1,
+        }, {
+          name: 'Twine', slots: 1,
+        },
+        {
+          name: 'Fake jewels', slots: 1,
+        }, {
+          name: 'Blank book', slots: 1,
+        },
+        {
+          name: 'Card deck', slots: 1,
+        }, {
+          name: 'Dice set', slots: 1,
+        },
+        {
+          name: 'Cook pots', slots: 1,
+        }, {
+          name: 'Face paint', slots: 1,
+        },
+        {
+          name: 'Whistle', slots: 1,
+        }, {
+          name: 'Instrument', slots: 1,
+        },
+        {
+          name: 'Quill & Ink', slots: 1,
+        }, {
+          name: 'Small bell', slots: 1,
+        },
       ],
     };
   },
@@ -377,6 +665,81 @@ export default {
       const randomHair = hair[this.dice(hair.length - 1)];
       return `You are ${randomPhysique.toLowerCase()} with a ${randomFace.toLowerCase()} face, ${randomSkin.toLowerCase()} skin, and ${randomHair.toLowerCase()} hair.`;
     },
+    rollGear() {
+      const findInRangedTable = (table, roll) => table.find(
+        (e) => e.range[0] <= roll && roll <= e.range[1],
+      );
+
+      const processHSItems = (items) => {
+        const initialData = { helmetString: null, shieldString: null, hsAcBonus: 0 };
+        if (!Array.isArray(items)) return initialData;
+
+        return items.reduce((acc, item) => {
+          const detailsString = `slots: ${item.slots}, quality: ${item.quality}`;
+          if (item.name === 'Helmet') {
+            acc.helmetString = `${item.name}, ${detailsString}`;
+            acc.hsAcBonus += item.acBonus || 0;
+          } else if (item.name === 'Shield') {
+            acc.shieldString = `${item.name}, ${detailsString}`;
+            acc.hsAcBonus += item.acBonus || 0;
+          }
+          return acc;
+        }, initialData);
+      };
+
+      const selectAndFormatGearItem = (table) => {
+        const item = table[this.dice(table.length) - 1];
+        return `${item.name}, slots: ${item.slots}`;
+      };
+
+      const armorData = findInRangedTable(this.armorTable, this.dice(20));
+      const baseAC = armorData?.acSet ?? 11;
+
+      const helmetShieldData = findInRangedTable(this.helmetShieldTable, this.dice(20));
+      const { helmetString, shieldString, hsAcBonus } = processHSItems(helmetShieldData?.items);
+
+      const dungeoneeringItem1 = selectAndFormatGearItem(this.dungeoneeringGear);
+      const dungeoneeringItem2 = selectAndFormatGearItem(this.dungeoneeringGear);
+      const generalGear1Item = selectAndFormatGearItem(this.generalGear1);
+      const generalGear2Item = selectAndFormatGearItem(this.generalGear2);
+      this.StartingGear.dungeoneeringItem1 = dungeoneeringItem1;
+      this.StartingGear.dungeoneeringItem2 = dungeoneeringItem2;
+      this.StartingGear.generalGear1Item = generalGear1Item;
+      this.StartingGear.generalGear2Item = generalGear2Item;
+
+      this.ArmorClass = baseAC + hsAcBonus;
+      if (armorData && armorData.name !== 'No armor') {
+        this.StartingGear.armor = `${armorData.name}, ${armorData.details || ''}, slots: ${armorData.slots}, quality: ${armorData.quality}`;
+      } else {
+        delete this.StartingGear.armor;
+      }
+
+      if (helmetString) {
+        this.StartingGear.helmet = helmetString;
+      } else {
+        delete this.StartingGear.helmet;
+      }
+
+      if (shieldString) {
+        this.StartingGear.shield = shieldString;
+      } else {
+        delete this.StartingGear.shield;
+      }
+
+      const returnedGear = {
+        ...(armorData && armorData.name !== 'No armor' && {
+          armor: `${armorData.name}, slots: ${armorData.slots}, quality: ${armorData.quality}`,
+        }),
+        ...(helmetString && { helmet: helmetString }),
+        ...(shieldString && { shield: shieldString }),
+        dungeoneeringItem1,
+        dungeoneeringItem2,
+        generalGear1Item,
+        generalGear2Item,
+      };
+
+      return returnedGear;
+    },
     async genCharacter() {
       this.Name = this.rollName();
       this.Description = this.rollDescription();
@@ -387,6 +750,7 @@ export default {
       this.Wisdom = this.rollStat();
       this.Charisma = this.rollStat();
       this.HitPoints = this.dice(8);
+      this.StartingGear = this.rollGear();
     },
   },
 };

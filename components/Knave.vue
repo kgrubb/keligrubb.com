@@ -13,18 +13,18 @@
         <div class="block">
           <div class="level">
             <div class="level-item">
-              <button class="button is-primary is-inverted is-outlined">
-                <NuxtLink to="/knavechargen">Generate Character</NuxtLink>
+              <button class="button is-white is-outlined">
+                <NuxtLink class="has-text-white" to="/knavechargen">Generate Character</NuxtLink>
               </button>
             </div>
             <div class="level-item">
-              <button class="button is-primary is-inverted is-outlined">
-                <NuxtLink to="/knaveweapongen">Generate Weapon</NuxtLink>
+              <button class="button is-white is-outlined">
+                <NuxtLink class="has-text-white" to="/knaveweapongen">Generate Weapon</NuxtLink>
               </button>
             </div>
             <div class="level-item">
-              <button class="button is-primary is-inverted is-outlined">
-                <NuxtLink to="/knaveweathergen">Generate Weather</NuxtLink>
+              <button class="button is-white is-outlined">
+                <NuxtLink class="has-text-white" to="/knaveweathergen">Generate Weather</NuxtLink>
               </button>
             </div>
           </div>

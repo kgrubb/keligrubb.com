@@ -8,8 +8,8 @@
         <h1 class="title is-3 has-text-weight-light has-text-centered">
           I'm {{ calculateAge }} and live in <a
             class="has-text-light"
-            href="https://goo.gl/maps/USRax4VdsGRMZJuQ7"
-          >Atlanta, Georgia</a>.
+            href="https://maps.app.goo.gl/QMNiUTTbadga9HTW9"
+          >Macon, Georgia</a>.
         </h1>
 
         <br>

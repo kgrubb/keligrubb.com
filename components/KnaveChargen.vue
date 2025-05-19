@@ -24,6 +24,9 @@
             <div class="level-item">
               <p><strong>Armor Class:</strong> {{ ArmorClass }}</p>
             </div>
+            <div class="level-item">
+              <p><strong>Equipment:</strong> {{ Slots }}</p>
+            </div>
           </div>
           <div class="container is-max-desktop">
             <div class="columns">
@@ -83,26 +86,41 @@ export default {
       Charisma: '',
       HitPoints: '',
       ArmorClass: 11,
-      StartingGear: [],
+      Slots: '',
+      StartingGear: {},
       character: '',
       characterTraits: {
         physique: [
           'Athletic',
           'Brawny',
+          'Bulky',
+          'Burly',
           'Corpulent',
           'Delicate',
+          'Flabby',
           'Gaunt',
+          'Gentle',
+          'Heavy',
           'Hulking',
+          'Husky',
           'Lanky',
+          'Lean',
+          'Lithe',
+          'Muscular',
+          'Petite',
+          'Plump',
           'Ripped',
           'Rugged',
           'Scrawny',
+          'Shapely',
           'Short',
           'Sinewy',
           'Slender',
-          'Flabby',
+          'Slim',
           'Statuesque',
+          'Stocky',
           'Stout',
+          'Tall',
           'Tiny',
           'Towering',
           'Willowy',
@@ -640,6 +658,104 @@ export default {
           name: 'Small bell', slots: 1,
         },
       ],
+      weapons: [
+        {
+          name: 'Dagger', damage: '1d6', slots: 1, hands: 1, quality: 3,
+        },
+        {
+          name: 'Club', damage: '1d6', slots: 1, hands: 1, quality: 3,
+        },
+        {
+          name: 'Sickle', damage: '1d6', slots: 1, hands: 1, quality: 3,
+        },
+        {
+          name: 'Staff', damage: '1d6', slots: 1, hands: 1, quality: 3,
+        },
+        {
+          name: 'Spear', damage: '1d8', slots: 2, hands: 1, quality: 3,
+        },
+        {
+          name: 'Sword', damage: '1d8', slots: 2, hands: 1, quality: 3,
+        },
+        {
+          name: 'Mace', damage: '1d8', slots: 2, hands: 1, quality: 3,
+        },
+        {
+          name: 'Axe', damage: '1d8', slots: 2, hands: 1, quality: 3,
+        },
+        {
+          name: 'Flail', damage: '1d8', slots: 2, hands: 1, quality: 3,
+        },
+        {
+          name: 'Halberd', damage: '1d10', slots: 3, hands: 2, quality: 3,
+        },
+        {
+          name: 'War Hammer', damage: '1d10', slots: 3, hands: 2, quality: 3,
+        },
+        {
+          name: 'Long Sword', damage: '1d10', slots: 3, hands: 2, quality: 3,
+        },
+        {
+          name: 'Battle Axe', damage: '1d10', slots: 3, hands: 2, quality: 3,
+        },
+        {
+          name: 'Sling', damage: '1d4', slots: 1, hands: 1, quality: 3,
+        },
+        {
+          name: 'Bow', damage: '1d6', slots: 2, hands: 2, quality: 3,
+        },
+        {
+          name: 'Crossbow', damage: '1d8', slots: 3, hands: 2, quality: 3,
+        },
+        {
+          name: 'Greatclub', damage: '1d8', slots: 3, hands: 2, quality: 3,
+        },
+        {
+          name: 'Handaxe', damage: '1d6', slots: 1, hands: 1, quality: 3,
+        },
+        {
+          name: 'Javelin', damage: '1d6', slots: 2, hands: 1, quality: 3,
+        },
+        {
+          name: 'Light Hammer', damage: '1d4', slots: 1, hands: 1, quality: 3,
+        },
+        {
+          name: 'Quarterstaff', damage: '1d6', slots: 2, hands: 1, quality: 3,
+        },
+        {
+          name: 'Glaive', damage: '1d10', slots: 3, hands: 2, quality: 3,
+        },
+        {
+          name: 'Greataxe', damage: '1d12', slots: 3, hands: 2, quality: 3,
+        },
+        {
+          name: 'Greatsword', damage: '2d6', slots: 3, hands: 2, quality: 3,
+        },
+        {
+          name: 'Lance', damage: '1d12', slots: 3, hands: 2, quality: 3,
+        },
+        {
+          name: 'Maul', damage: '2d6', slots: 3, hands: 2, quality: 3,
+        },
+        {
+          name: 'Morningstar', damage: '1d8', slots: 2, hands: 1, quality: 3,
+        },
+        {
+          name: 'Pike', damage: '1d10', slots: 3, hands: 2, quality: 3,
+        },
+        {
+          name: 'Rapier', damage: '1d8', slots: 2, hands: 1, quality: 3,
+        },
+        {
+          name: 'Scimitar', damage: '1d6', slots: 1, hands: 1, quality: 3,
+        },
+        {
+          name: 'Trident', damage: '1d6', slots: 2, hands: 1, quality: 3,
+        },
+        {
+          name: 'Heavy Crossbow', damage: '1d10', slots: 3, hands: 2, quality: 3,
+        },
+      ],
     };
   },
   mounted() {
@@ -692,6 +808,7 @@ export default {
         return `${item.name}, slots: ${item.slots}`;
       };
 
+      const weaponData = this.weapons[this.dice(this.weapons.length - 1)];
       const armorData = findInRangedTable(this.armorTable, this.dice(20));
       const baseAC = armorData?.acSet ?? 11;
 
@@ -727,6 +844,7 @@ export default {
       }
 
       const returnedGear = {
+        weapon: `${weaponData.name}, damage: ${weaponData.damage}, hands: ${weaponData.hands}, slots: ${weaponData.slots}, quality: ${weaponData.quality}`,
         ...(armorData && armorData.name !== 'No armor' && {
           armor: `${armorData.name}, slots: ${armorData.slots}, quality: ${armorData.quality}`,
         }),
@@ -740,6 +858,15 @@ export default {
 
       return returnedGear;
     },
+    calculateSlots(gear, constitution) {
+      const totalSlots = constitution;
+      const usedSlots = Object.values(gear).reduce((sum, itemString) => {
+        const slotValueString = itemString.match(/slots:\s*(\d+)/i)?.[1] || '0';
+        return sum + parseInt(slotValueString, 10);
+      }, 0);
+      const slots = `${usedSlots}/${totalSlots} slots`;
+      return slots;
+    },
     async genCharacter() {
       this.Name = this.rollName();
       this.Description = this.rollDescription();
@@ -751,6 +878,7 @@ export default {
       this.Charisma = this.rollStat();
       this.HitPoints = this.dice(8);
       this.StartingGear = this.rollGear();
+      this.Slots = this.calculateSlots(this.StartingGear, this.Constitution);
     },
   },
 };

@@ -28,7 +28,7 @@
               <font-awesome-icon icon="fa-brands fa-twitch" class="fa-xl" />
             </span>
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/kgrubb" class="has-text-light">
+          <!-- <a target="_blank" rel="noopener noreferrer" href="https://github.com/kgrubb" class="has-text-light">
             <span class="icon is-large">
               <font-awesome-icon icon="fa-brands fa-github" class="fa-xl" />
             </span>
@@ -37,7 +37,7 @@
             <span class="icon is-large">
               <font-awesome-icon icon="fa-brands fa-gitlab" class="fa-xl" />
             </span>
-          </a>
+          </a> -->
           <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/madisongrubb" class="has-text-light">
             <span class="icon is-large">
               <font-awesome-icon icon="fa-brands fa-linkedin" class="fa-xl" />

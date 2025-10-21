@@ -1,19 +1,19 @@
 <template>
   <section>
-    <Nav />
+    <NavigationBar />
     <Knave />
   </section>
 </template>
 
 <script>
-import Nav from '../components/Nav.vue';
+import NavigationBar from '../components/Nav.vue';
 import Knave from '../components/Knave.vue';
 
 export default {
-  name: 'Knave',
+  name: 'KnavePage',
 
   components: {
-    Nav,
+    NavigationBar,
     Knave,
   },
 };

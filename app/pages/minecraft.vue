@@ -1,19 +1,19 @@
 <template>
   <section>
-    <Nav />
+    <NavigationBar />
     <McHero />
   </section>
 </template>
 
 <script>
-import Nav from '../components/Nav.vue';
+import NavigationBar from '../components/Nav.vue';
 import McHero from '../components/McHero.vue';
 
 export default {
-  name: 'Minecraft',
+  name: 'MinecraftPage',
 
   components: {
-    Nav,
+    NavigationBar,
     McHero,
   },
 };

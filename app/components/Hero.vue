@@ -1,60 +1,59 @@
 <template>
-  <section class="hero is-primary is-bold is-fullheight">
-    <div class="hero-body">
-      <div class="container is-fluid">
-        <h1 class="title is-1 has-text-centered">
-          Hi! I'm Keli Grubb.
-        </h1>
-        <h1 class="title is-3 has-text-weight-light has-text-centered">
-          I'm {{ calculateAge }} and live in <a
-            class="has-text-light"
-            href="https://maps.app.goo.gl/QMNiUTTbadga9HTW9"
-          >Macon, Georgia</a>.
-        </h1>
+  <section class="flex items-center justify-center min-h-screen bg-primary">
+    <div class="container mx-auto px-4">
+      <h1 class="text-5xl font-bold text-center text-white">
+        Hi! I'm Keli Grubb.
+      </h1>
+      <h1 class="text-3xl font-light text-center text-white">
+        I'm {{ calculateAge }} and live in <a
+          class="text-white hover:text-gray-300"
+          href="https://maps.app.goo.gl/QMNiUTTbadga9HTW9"
+        >Macon, Georgia</a>.
+      </h1>
 
-        <br>
-        <h1 class="title is-4 has-text-weight-light has-text-centered">
-          I'm {{ hobby }}.
-        </h1>
-        <br>
-        <div class="has-text-centered">
-          <a target="_blank" rel="noopener noreferrer" href="https://mastodon.online/@itsmekeli" class="has-text-light">
-            <span class="icon is-large">
-              <font-awesome-icon icon="fa-brands fa-mastodon" class="fa-xl" />
-            </span>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://twitch.tv/socialsyndrome" class="has-text-light">
-            <span class="icon is-large">
-              <font-awesome-icon icon="fa-brands fa-twitch" class="fa-xl" />
-            </span>
-          </a>
-          <!-- <a target="_blank" rel="noopener noreferrer" href="https://github.com/kgrubb" class="has-text-light">
-            <span class="icon is-large">
-              <font-awesome-icon icon="fa-brands fa-github" class="fa-xl" />
-            </span>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://gitlab.com/madison.grubb" class="has-text-light">
-            <span class="icon is-large">
-              <font-awesome-icon icon="fa-brands fa-gitlab" class="fa-xl" />
-            </span>
-          </a> -->
-          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/madisongrubb" class="has-text-light">
-            <span class="icon is-large">
-              <font-awesome-icon icon="fa-brands fa-linkedin" class="fa-xl" />
-            </span>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/atlasfuture" class="has-text-light">
-            <span class="icon is-large">
-              <font-awesome-icon icon="fa-brands fa-soundcloud" class="fa-xl" />
-            </span>
-          </a>
-        </div>
+      <br>
+      <h1 class="text-2xl font-light text-center text-white">
+        I'm {{ hobby }}.
+      </h1>
+      <br>
+      <div class="text-center">
+        <a target="_blank" rel="noopener noreferrer" href="https://mastodon.online/@itsmekeli" class="text-white hover:text-gray-300">
+          <span class="inline-block mx-2">
+            <font-awesome-icon icon="fa-brands fa-mastodon" class="fa-xl" />
+          </span>
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://twitch.tv/socialsyndrome" class="text-white hover:text-gray-300">
+          <span class="inline-block mx-2">
+            <font-awesome-icon icon="fa-brands fa-twitch" class="fa-xl" />
+          </span>
+        </a>
+        <!-- <a target="_blank" rel="noopener noreferrer" href="https://github.com/kgrubb" class="text-white hover:text-gray-300">
+          <span class="inline-block mx-2">
+            <font-awesome-icon icon="fa-brands fa-github" class="fa-xl" />
+          </span>
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://gitlab.com/madison.grubb" class="text-white hover:text-gray-300">
+          <span class="inline-block mx-2">
+            <font-awesome-icon icon="fa-brands fa-gitlab" class="fa-xl" />
+          </span>
+        </a> -->
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/madisongrubb" class="text-white hover:text-gray-300">
+          <span class="inline-block mx-2">
+            <font-awesome-icon icon="fa-brands fa-linkedin" class="fa-xl" />
+          </span>
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/atlasfuture" class="text-white hover:text-gray-300">
+          <span class="inline-block mx-2">
+            <font-awesome-icon icon="fa-brands fa-soundcloud" class="fa-xl" />
+          </span>
+        </a>
       </div>
     </div>
   </section>
 </template>
 <script>
 export default {
+  name: 'HeroSection',
   data() {
     return {
       age: '',

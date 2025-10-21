@@ -1,19 +1,19 @@
 <template>
   <section>
-    <Nav />
+    <NavigationBar />
     <tes3mpHero />
   </section>
 </template>
 
 <script>
-import Nav from '../components/Nav.vue';
+import NavigationBar from '../components/Nav.vue';
 import tes3mpHero from '../components/tes3mpHero.vue';
 
 export default {
-  name: 'TES3MP',
+  name: 'Tes3mpPage',
 
   components: {
-    Nav,
+    NavigationBar,
     tes3mpHero,
   },
 };

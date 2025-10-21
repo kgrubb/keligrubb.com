@@ -1,23 +1,23 @@
 <template>
   <section>
-    <Nav />
+    <NavigationBar />
     <Hero />
-    <Projects id="projects" />
+    <ProjectsSection id="projects" />
   </section>
 </template>
 
 <script>
-import Nav from '../components/Nav.vue';
+import NavigationBar from '../components/Nav.vue';
 import Hero from '../components/Hero.vue';
-import Projects from '../components/Projects.vue';
+import ProjectsSection from '../components/Projects.vue';
 
 export default {
   name: 'HomePage',
 
   components: {
-    Nav,
+    NavigationBar,
     Hero,
-    Projects,
+    ProjectsSection,
   },
 };
 </script>

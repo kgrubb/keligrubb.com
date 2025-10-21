@@ -1,19 +1,19 @@
 <template>
   <section>
-    <Nav />
+    <NavigationBar />
     <KnaveWeapongen />
   </section>
 </template>
 
 <script>
-import Nav from '../components/Nav.vue';
+import NavigationBar from '../components/Nav.vue';
 import KnaveWeapongen from '../components/KnaveWeapongen.vue';
 
 export default {
-  name: 'Knave Chargen',
+  name: 'KnaveWeapongenPage',
 
   components: {
-    Nav,
+    NavigationBar,
     KnaveWeapongen,
   },
 };

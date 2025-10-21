@@ -1,26 +1,23 @@
 <template>
-  <section class="hero is-primary is-bold is-fullheight">
-    <div class="hero-body has-bg-img has-text-centered">
-      <div class="container is-fluid">
-        <div class="block">
-          <h3>A Weather Generator</h3>
-        </div>
-        <div class="block level-item has-text-centered">
-          <img alt="designed for knave" width="256" src="../assets/designed_for_knave.png">
-        </div>
-        <div class="block">
-          <button class="button is-white is-outlined" @click="genWeather()">
-            Reroll Weather
-          </button>
-        </div>
-        <div>
-          <br>
-          <p> {{ randomWeather }} </p>
-        </div>
+  <section class="flex items-center justify-center min-h-screen bg-primary">
+    <div class="container mx-auto px-4 text-center">
+      <div class="mb-4">
+        <h3 class="text-2xl font-bold text-white">A Weather Generator</h3>
+      </div>
+      <div class="flex justify-center mb-4">
+        <img alt="designed for knave" width="256" src="../assets/designed_for_knave.png">
+      </div>
+      <div class="mb-4">
+        <button class="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary px-6 py-2 rounded" @click="genWeather()">
+          Reroll Weather
+        </button>
+      </div>
+      <div>
+        <br>
+        <p class="text-white"> {{ randomWeather }} </p>
       </div>
     </div>
   </section>
-
 </template>
 <script>
 export default {
@@ -95,7 +92,7 @@ export default {
 </script>
 
 <style scoped>
-.has-bg-img {
+section {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .9)),
     url("../assets/knave.jpg");
   background-size: cover;

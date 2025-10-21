@@ -1,85 +1,70 @@
 <template>
-  <section class="hero is-dark is-medium">
-    <h1 class="title has-text-centered is-pushed-down">
+  <section class="bg-gray-800 text-white py-16">
+    <h1 class="text-4xl font-bold text-center pt-16">
       Some of the projects I've worked on:
     </h1>
-    <div class="hero-body is-pushed-up">
-      <div class="columns">
-        <div
-          class="column has-text-centered"
-        >
-          <div class="container is-fluid">
+    <div class="container mx-auto px-4 pt-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-full h-full">
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/elementary"
             >
-              <article class="box">
-                <div class="level-item">
-                  <figure class="image is-128x128">
-                    <img
-                      alt="elementary os"
-                      src="../assets/elementary.svg"
-                    >
-                  </figure>
+              <article class="bg-white rounded-lg shadow-md p-8 text-gray-800 hover:shadow-lg transition-shadow h-full flex flex-col">
+                <div class="flex justify-center mb-6">
+                  <img
+                    alt="elementary os"
+                    src="../assets/elementary.svg"
+                    class="w-48 h-32 object-contain"
+                  >
                 </div>
-                <br>
-                <p class="has-text-centered">
+                <p class="text-center flex-grow">
                   I am a regular contributor to elementary OS.
                 </p>
-                <br>
               </article>
             </a>
           </div>
         </div>
-        <div
-          class="column has-text-centered"
-        >
-          <div class="container is-fluid">
+        <div class="text-center">
+          <div class="w-full h-full">
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://microluxe20.com"
             >
-              <article class="box">
-                <div class="level-item">
-                  <figure class="image is-128x128">
-                    <img
-                      alt="microluxe20"
-                      src="../assets/microluxe20.jpg"
-                      class="is-bordered"
-                    >
-                  </figure>
+              <article class="bg-white rounded-lg shadow-md p-8 text-gray-800 hover:shadow-lg transition-shadow h-full flex flex-col">
+                <div class="flex justify-center mb-6">
+                  <img
+                    alt="microluxe20"
+                    src="../assets/microluxe20.jpg"
+                    class="w-48 h-32 object-cover rounded-lg"
+                  >
                 </div>
-                <br>
-                <p class="has-text-centered">
+                <p class="text-center flex-grow">
                   I built my own tabletop game using NodeJS to generate pdf files.
                 </p>
               </article>
             </a>
           </div>
         </div>
-        <div
-          class="column has-text-centered"
-        >
-          <div class="container is-fluid">
+        <div class="text-center">
+          <div class="w-full h-full">
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://hvzga.com"
             >
-              <article class="box">
-                <div class="level-item">
-                  <figure class="image is-128x128">
-                    <img
-                      alt="hvzga"
-                      src="../assets/hvz.jpg"
-                      class="is-bordered"
-                    >
-                  </figure>
+              <article class="bg-white rounded-lg shadow-md p-8 text-gray-800 hover:shadow-lg transition-shadow h-full flex flex-col">
+                <div class="flex justify-center mb-6">
+                  <img
+                    alt="hvzga"
+                    src="../assets/hvz.jpg"
+                    class="w-48 h-32 object-cover rounded-lg"
+                  >
                 </div>
-                <br>
-                <p class="has-text-centered">
+                <p class="text-center flex-grow">
                   I'm a moderator and site owner for a yearly Humans vs Zombies Invitational.
                 </p>
               </article>
@@ -92,18 +77,6 @@
 </template>
 <script>
 export default {
-  name: 'Projects',
+  name: 'ProjectsSection',
 };
 </script>
-<style scoped>
-.is-bordered {
-border-radius: 0.35rem;
-}
-.is-pushed-down {
-  padding-top: 4rem;
-}
-.is-pushed-up {
-  padding-top: 4rem !important;
-}
-
-</style>

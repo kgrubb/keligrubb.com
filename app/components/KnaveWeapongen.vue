@@ -1,39 +1,25 @@
 <template>
-  <section class="hero is-primary is-bold is-fullheight">
-    <div class="hero-body has-bg-img has-text-centered">
-      <div class="container is-fluid">
-        <div class="block">
-          <h3>A Weapon Generator</h3>
-        </div>
-        <div class="block level-item has-text-centered">
-          <img alt="designed for knave" width="256" src="../assets/designed_for_knave.png">
-        </div>
-        <div class="block">
-          <button class="button is-white is-outlined" @click="genRandomWeapon()">
-            Reroll Weapon
-          </button>
-        </div>
-        <div>
-          <br>
-          <h4 class="title is-4">{{ randomWeaponName }}</h4>
-          <p>{{ randomWeaponDescription }}</p>
-        </div>
+  <section class="flex items-center justify-center min-h-screen bg-primary">
+    <div class="container mx-auto px-4 text-center">
+      <div class="mb-4">
+        <h3 class="text-2xl font-bold text-white">A Weapon Generator</h3>
+      </div>
+      <div class="flex justify-center mb-4">
+        <img alt="designed for knave" width="256" src="../assets/designed_for_knave.png">
+      </div>
+      <div class="mb-4">
+        <button class="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary px-6 py-2 rounded" @click="genRandomWeapon()">
+          Reroll Weapon
+        </button>
+      </div>
+      <div>
+        <br>
+        <h4 class="text-2xl font-bold text-white">{{ randomWeaponName }}</h4>
+        <p class="text-white">{{ randomWeaponDescription }}</p>
       </div>
     </div>
   </section>
-
 </template>
-<style>
-.has-border {
-  border-top: 1px solid rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(255, 255, 255);
-  padding: 14px 0px;
-  margin-bottom: 12px !important;
-}
-.has-border-right {
-  border-right: 1px solid rgb(255, 255, 255);
-}
-</style>
 <script>
 export default {
   data() {
@@ -152,7 +138,7 @@ export default {
 };
 </script>
 <style scoped>
-.has-bg-img {
+section {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .9)),
     url("../assets/knave.jpg");
   background-size: cover;

@@ -1,58 +1,58 @@
 <template>
-  <section class="hero is-primary is-bold is-fullheight">
-    <div class="hero-body has-bg-img has-text-centered">
-      <div class="container is-fluid">
-        <div class="block">
-          <h3>A Character Generator</h3>
-        </div>
-        <div class="block level-item has-text-centered">
-          <img alt="designed for knave" width="256" src="../assets/designed_for_knave.png">
-        </div>
-        <div class="block">
-          <button class="button is-white is-outlined" @click="genCharacter()">
-            Reroll Character
-          </button>
-        </div>
-        <div class="block">
-          <div class="container level is-max-desktop has-border">
-            <div class="level-item">
-              <p><strong>Name:</strong> {{ Name }}</p>
+  <section class="flex items-center justify-center min-h-screen bg-primary">
+    <div class="w-full max-w-6xl mx-auto px-4 text-center">
+      <div class="mb-4">
+        <h3 class="text-2xl font-bold text-white">A Character Generator</h3>
+      </div>
+      <div class="flex justify-center mb-4">
+        <img alt="designed for knave" width="256" src="../assets/designed_for_knave.png">
+      </div>
+      <div class="mb-4">
+        <button class="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary px-6 py-2 rounded" @click="genCharacter()">
+          Reroll Character
+        </button>
+      </div>
+      <div class="mb-4">
+        <div class="max-w-4xl mx-auto border-t border-b border-white py-4 mb-3">
+          <div class="flex flex-wrap justify-center items-center gap-4">
+            <div class="flex justify-center">
+              <p class="text-white"><strong>Name:</strong> {{ Name }}</p>
             </div>
-            <div class="level-item">
-              <p><strong>HitPoints:</strong> {{ HitPoints }}/{{ HitPoints }}</p>
+            <div class="flex justify-center">
+              <p class="text-white"><strong>HitPoints:</strong> {{ HitPoints }}/{{ HitPoints }}</p>
             </div>
-            <div class="level-item">
-              <p><strong>Armor Class:</strong> {{ ArmorClass }}</p>
+            <div class="flex justify-center">
+              <p class="text-white"><strong>Armor Class:</strong> {{ ArmorClass }}</p>
             </div>
-            <div class="level-item">
-              <p><strong>Equipment:</strong> {{ Slots }}</p>
+            <div class="flex justify-center">
+              <p class="text-white"><strong>Equipment:</strong> {{ Slots }}</p>
             </div>
           </div>
-          <div class="container is-max-desktop">
-            <div class="columns">
-              <div class="column has-border-right">
-                <div>
-                  <h3 class="title is-4">You are {{ Name }}</h3>
-                  <p>{{ Description }}</p>
-                </div>
-                <br>
-                <div>
-                   <h3 class="title is-4">Starting Gear</h3>
-                    <ul>
-                      <li v-for="(item, index) in StartingGear" :key="index">{{ item }}</li>
-                    </ul>
-                </div>
+        </div>
+        <div class="max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="border-r border-white pr-4">
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-4">You are {{ Name }}</h3>
+                <p class="text-white">{{ Description }}</p>
               </div>
-              <div class="column">
-                <div>
-                  <h3 class="title is-4">Abilities</h3>
-                  <p>Strength: {{ Strength }}</p>
-                  <p>Dexterity: {{ Dexterity }}</p>
-                  <p>Constitution: {{ Constitution }}</p>
-                  <p>Intelligence: {{ Intelligence }}</p>
-                  <p>Wisdom: {{ Wisdom }}</p>
-                  <p>Charisma: {{ Charisma }}</p>
-                </div>
+              <br>
+              <div>
+                 <h3 class="text-2xl font-bold text-white mb-4">Starting Gear</h3>
+                  <ul class="text-white list-disc list-inside">
+                    <li v-for="(item, index) in StartingGear" :key="index">{{ item }}</li>
+                  </ul>
+              </div>
+            </div>
+            <div class="pl-4">
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-4">Abilities</h3>
+                <p class="text-white">Strength: {{ Strength }}</p>
+                <p class="text-white">Dexterity: {{ Dexterity }}</p>
+                <p class="text-white">Constitution: {{ Constitution }}</p>
+                <p class="text-white">Intelligence: {{ Intelligence }}</p>
+                <p class="text-white">Wisdom: {{ Wisdom }}</p>
+                <p class="text-white">Charisma: {{ Charisma }}</p>
               </div>
             </div>
           </div>
@@ -60,17 +60,12 @@
       </div>
     </div>
   </section>
-
 </template>
-<style>
-.has-border {
-  border-top: 1px solid rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(255, 255, 255);
-  padding: 14px 0px;
-  margin-bottom: 12px !important;
-}
-.has-border-right {
-  border-right: 1px solid rgb(255, 255, 255);
+<style scoped>
+section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .9)),
+    url("../assets/knave.jpg");
+  background-size: cover;
 }
 </style>
 <script>
@@ -884,7 +879,7 @@ export default {
 };
 </script>
 <style scoped>
-.has-bg-img {
+section {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .9)),
     url("../assets/knave.jpg");
   background-size: cover;

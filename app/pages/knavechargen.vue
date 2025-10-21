@@ -1,19 +1,19 @@
 <template>
   <section>
-    <Nav />
+    <NavigationBar />
     <KnaveChargen />
   </section>
 </template>
 
 <script>
-import Nav from '../components/Nav.vue';
+import NavigationBar from '../components/Nav.vue';
 import KnaveChargen from '../components/KnaveChargen.vue';
 
 export default {
-  name: 'Knave Chargen',
+  name: 'KnaveChargenPage',
 
   components: {
-    Nav,
+    NavigationBar,
     KnaveChargen,
   },
 };

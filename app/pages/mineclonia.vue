@@ -1,20 +1,20 @@
 <template>
   <section>
     <NavigationBar />
-    <McHero />
+    <MinecloniaHero />
   </section>
 </template>
 
 <script>
 import NavigationBar from '../components/Nav.vue';
-import McHero from '../components/McHero.vue';
+import MinecloniaHero from '../components/MinecloniaHero.vue';
 
 export default {
-  name: 'MinecraftPage',
+  name: 'MinecloniaPage',
 
   components: {
     NavigationBar,
-    McHero,
+    MinecloniaHero,
   },
 };
 </script>

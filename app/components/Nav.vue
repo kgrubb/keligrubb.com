@@ -16,8 +16,8 @@
         <NuxtLink to="/#projects" class="text-white hover:text-gray-300 px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-200">
           Projects
         </NuxtLink>
-        <NuxtLink to="/minecraft" class="text-white hover:text-gray-300 px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-200">
-          Minecraft
+        <NuxtLink to="/mineclonia" class="text-white hover:text-gray-300 px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-200">
+          Mineclonia
         </NuxtLink>
         <NuxtLink to="/knave" class="text-white hover:text-gray-300 px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-200">
           Knave
@@ -44,8 +44,8 @@
         <NuxtLink to="/#projects" class="block text-white hover:text-gray-300 px-4 py-2" @click="closeBurger">
           Projects
         </NuxtLink>
-        <NuxtLink to="/minecraft" class="block text-white hover:text-gray-300 px-4 py-2" @click="closeBurger">
-          Minecraft
+        <NuxtLink to="/mineclonia" class="block text-white hover:text-gray-300 px-4 py-2" @click="closeBurger">
+          Mineclonia
         </NuxtLink>
         <NuxtLink to="/knave" class="block text-white hover:text-gray-300 px-4 py-2" @click="closeBurger">
           Knave

@@ -16,13 +16,17 @@ export default {
     overlayOpacity: {
       type: String,
       default: '0.5'
+    },
+    overlayOpacityEnd: {
+      type: String,
+      default: '0.9'
     }
   },
   computed: {
     backgroundStyle() {
       if (this.backgroundImage) {
         return {
-          background: `linear-gradient(rgba(0, 0, 0, ${this.overlayOpacity}), rgba(0, 0, 0, 0.9)), url("/_nuxt/assets/${this.backgroundImage}")`,
+          background: `linear-gradient(rgba(0, 0, 0, ${this.overlayOpacity}), rgba(0, 0, 0, ${this.overlayOpacityEnd})), url("/_nuxt/assets/${this.backgroundImage}")`,
           backgroundSize: 'cover'
         }
       }

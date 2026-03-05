@@ -3,7 +3,8 @@ import pluginJs from "@eslint/js";
 import pluginVue from "eslint-plugin-vue";
 
 export default [
-  {files: ["**/*.{js,mjs,cjs,vue}"]},
+  { ignores: [".nuxt/**", ".output/**"] },
+  { files: ["**/*.{js,mjs,cjs,vue}"] },
   {languageOptions: { globals: globals.browser }},
   pluginJs.configs.recommended,
   ...pluginVue.configs["flat/essential"],
@@ -13,15 +14,6 @@ export default [
       'vue/no-reserved-component-names': 'off',
       'max-len': ['error', { code: 240, ignorePattern: '^import .*' }],
       'no-undef': 'off',
-    },
-  },
-  {
-    files: [".nuxt/**/*"],
-    rules: {
-      'max-len': 'off',
-      'no-useless-escape': 'off',
-      'no-unused-vars': 'off',
-      'no-empty': 'off',
     },
   },
 ];

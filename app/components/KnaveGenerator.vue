@@ -1,5 +1,5 @@
 <template>
-  <HeroSection background-image="../assets/knave.jpg">
+  <HeroSection :background-image="background">
     <div class="mb-4">
       <h3 class="text-2xl font-bold text-white">{{ title }}</h3>
     </div>
@@ -19,20 +19,24 @@
       <slot />
     </div>
   </HeroSection>
+  </HeroSection>
 </template>
 
 <script>
+import knaveBg from '../assets/knave.jpg';
+
 export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     buttonText: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
-  emits: ['generate']
-}
+  emits: ['generate'],
+  data: () => ({ background: knaveBg }),
+};
 </script>

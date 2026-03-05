@@ -1,5 +1,5 @@
 <template>
-  <HeroSection background-image="tes3mp.jpg" overlay-opacity="0.5">
+  <HeroSection :background-image="background" overlay-opacity="0.5">
     <h1 class="text-5xl font-bold text-white">
       Morrowind. Multiplayer. Crazy, right?
     </h1>
@@ -33,3 +33,12 @@
     </a>
   </HeroSection>
 </template>
+
+<script>
+import tes3mpBg from '../assets/tes3mp.jpg';
+
+export default {
+  name: 'Tes3mpHero',
+  data: () => ({ background: tes3mpBg }),
+};
+</script>

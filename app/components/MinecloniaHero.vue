@@ -1,5 +1,5 @@
 <template>
-  <HeroSection background-image="minecraft.jpg" overlay-opacity="0.25" overlay-opacity-end="0.5">
+  <HeroSection :background-image="background" overlay-opacity="0.25" overlay-opacity-end="0.5">
     <div class="w-full max-w-xl mx-auto px-4 py-12 sm:py-16 space-y-8">
       <div class="text-center">
         <h1 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight mb-4">Want to play Mineclonia with me?</h1>
@@ -59,12 +59,14 @@
 </template>
 
 <script>
+import minecraftBg from '../assets/minecraft.jpg';
+
 const A = 'mc.keligrubb.com';
 const copyToClipboard = (text) => navigator.clipboard.writeText(text);
 
 export default {
   name: 'MinecloniaHero',
-  data: () => ({ copied: false, resetTimerId: null }),
+  data: () => ({ copied: false, resetTimerId: null, background: minecraftBg }),
   beforeUnmount() { clearTimeout(this.resetTimerId); },
   methods: {
     copy() {

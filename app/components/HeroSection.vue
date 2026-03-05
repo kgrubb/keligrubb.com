@@ -26,7 +26,7 @@ export default {
     backgroundStyle() {
       if (this.backgroundImage) {
         return {
-          background: `linear-gradient(rgba(0, 0, 0, ${this.overlayOpacity}), rgba(0, 0, 0, ${this.overlayOpacityEnd})), url("/_nuxt/assets/${this.backgroundImage}")`,
+          background: `linear-gradient(rgba(0, 0, 0, ${this.overlayOpacity}), rgba(0, 0, 0, ${this.overlayOpacityEnd})), url("${this.backgroundImage}")`,
           backgroundSize: 'cover'
         }
       }

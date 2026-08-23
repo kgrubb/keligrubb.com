@@ -1,0 +1,1 @@
+import{L as e,t}from"./K82bPWN6.js";var n={name:`DefaultLayout`};function r(t,n,r,i,a,o){return e(t.$slots,`default`)}var i=t(n,[[`render`,r]]);export{i as default};

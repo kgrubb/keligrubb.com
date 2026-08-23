@@ -19,7 +19,6 @@
       <slot />
     </div>
   </HeroSection>
-  </HeroSection>
 </template>
 
 <script>

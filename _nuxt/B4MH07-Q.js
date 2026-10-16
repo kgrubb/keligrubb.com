@@ -1,0 +1,1 @@
+var e=new URL(`designed_for_knave.DkoGVkzx.png`,import.meta.url).href;export{e as t};
